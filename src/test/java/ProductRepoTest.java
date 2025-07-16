@@ -56,6 +56,6 @@ class ProductRepoTest {
         repo.removeProduct("1");
 
         //THEN
-        assertNull(repo.getProductById("1"));
+        assertNull(repo.getProductById("1").orElse(null));
     }
 }
