@@ -25,4 +25,8 @@ public class ShopService {
                     order.orderStatus().equals(orderStatus)
                 ).toList();
     }
+
+    public void updateOrder(String orderId,OrderStatus orderStatus){
+        orderRepo.addOrder(orderRepo.getOrderById(orderId).withOrderStatus(orderStatus));
+    }
 }
